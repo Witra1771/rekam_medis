@@ -100,7 +100,7 @@
                                                                 <span class="input-group-text">Adakah yang
                                                                     Memeberi Dukungan Hidup?</span>
                                                             </div>
-                                                            <input type="text" name="dukungan_hidup" id=""
+                                                            <input required type="text" name="dukungan_hidup" id=""
                                                                 class="form-control"
                                                                 placeholder="lihat petunjuk pengisian">
                                                         </div>
@@ -112,7 +112,7 @@
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text">Siapa</span>
                                                             </div>
-                                                            <input type="text" name="pemberi_dukungan" id=""
+                                                            <input required type="text" name="pemberi_dukungan" id=""
                                                                 class="form-control"
                                                                 placeholder="lihat petunjuk pengisian">
                                                         </div>
@@ -125,7 +125,7 @@
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text">Finansial</span>
                                                             </div>
-                                                            <select name="finansial" id="" class="form-control">
+                                                            <select required name="finansial" id="" class="form-control">
                                                                 <option value="0">Tidak</option>
                                                                 <option value="1">Ya</option>
                                                             </select>
@@ -133,7 +133,7 @@
                                                                 <span class="input-group-text">Tempat
                                                                     Tinggal</span>
                                                             </div>
-                                                            <select name="tempat_tinggal" id="" class="form-control">
+                                                            <select required name="tempat_tinggal" id="" class="form-control">
                                                                 <option value="0">Tidak</option>
                                                                 <option value="1">Ya</option>
                                                             </select>
@@ -142,7 +142,7 @@
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text">Makan</span>
                                                             </div>
-                                                            <select name="makan" id="" class="form-control">
+                                                            <select required name="makan" id="" class="form-control">
                                                                 <option value="0">Tidak</option>
                                                                 <option value="1">Ya</option>
                                                             </select>
@@ -150,7 +150,7 @@
                                                                 <span
                                                                     class="input-group-text">Pengobatan/Perawatan</span>
                                                             </div>
-                                                            <select name="pngbtn_prwtn" id="" class="form-control">
+                                                            <select required name="pngbtn_prwtn" id="" class="form-control">
                                                                 <option value="0">Tidak</option>
                                                                 <option value="1">Ya</option>
                                                             </select>
@@ -208,22 +208,22 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">T</span>
                                                         </div>
-                                                        <input type="text" class="form-control" name="T" id="jk"
+                                                        <input required type="text" class="form-control" name="T" id="jk"
                                                             placeholder="">
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">N</span>
                                                         </div>
-                                                        <input type="text" class="form-control" name="N" id="jk"
+                                                        <input required type="text" class="form-control" name="N" id="jk"
                                                             placeholder="">
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">RR</span>
                                                         </div>
-                                                        <input type="text" class="form-control" name="RR" id="jk"
+                                                        <input required type="text" class="form-control" name="RR" id="jk"
                                                             placeholder="">
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">SB</span>
                                                         </div>
-                                                        <input type="text" class="form-control" name="SB" id="jk"
+                                                        <input required type="text" class="form-control" name="SB" id="jk"
                                                             placeholder="">
                                                     </div>
                                                 </div>
@@ -234,7 +234,7 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">Penampilan</span>
                                                         </div>
-                                                        <select name="penampilan" id="" class="form-control">
+                                                        <select required name="penampilan" id="" class="form-control">
                                                             <option value="R">Rapi</option>
                                                             <option value="KR">Kurang Rapi</option>
                                                         </select>
@@ -245,7 +245,7 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">Cara Berjalan</span>
                                                         </div>
-                                                        <select name="cara_berjalan" id="" class="form-control">
+                                                        <select required name="cara_berjalan" id="" class="form-control">
                                                             <option value="Sempoyongan">Sempoyongan</option>
                                                             <option value="Biasa">Biasa</option>
                                                         </select>
@@ -256,7 +256,7 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">Cara Bicara</span>
                                                         </div>
-                                                        <select name="cara_bicara" id="" class="form-control">
+                                                        <select required name="cara_bicara" id="" class="form-control">
                                                             <option value="Pelo/Cadel">Pelo/Cadel</option>
                                                             <option value="Biasa">Biasa</option>
                                                         </select>
@@ -269,7 +269,7 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">Konjungtiva</span>
                                                         </div>
-                                                        <select name="konjungtiva" id="" class="form-control">
+                                                        <select required name="konjungtiva" id="" class="form-control">
                                                             <option value="Kemerahan">Kemerahan</option>
                                                             <option value="Normal">Normal</option>
                                                         </select>
@@ -280,7 +280,7 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">Bekas Suntikan</span>
                                                         </div>
-                                                        <select name="bekas_suntikan" id="" class="form-control">
+                                                        <select required name="bekas_suntikan" id="" class="form-control">
                                                             <option value="Ada">Ada</option>
                                                             <option value="Tidak Ada">Tidak Ada</option>
                                                         </select>
@@ -291,7 +291,7 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">Tremor</span>
                                                         </div>
-                                                        <select name="tremor" id="" class="form-control">
+                                                        <select required name="tremor" id="" class="form-control">
                                                             <option value="Ada">Ada</option>
                                                             <option value="Tidak Ada">Tidak Ada</option>
                                                         </select>
@@ -315,7 +315,7 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">Pembicaraan</span>
                                                         </div>
-                                                        <select name="alur_pembicaraan" id="" class="form-control">
+                                                        <select required name="alur_pembicaraan" id="" class="form-control">
                                                             <option value="N">Normal</option>
                                                             <option value="TN">Tidak Normal</option>
                                                         </select>
@@ -328,7 +328,7 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">Waham</span>
                                                         </div>
-                                                        <select name="waham" id="" class="form-control">
+                                                        <select required name="waham" id="" class="form-control">
                                                             <option value="A">Ada</option>
                                                             <option value="Ta">Tidak Ada</option>
                                                         </select>
@@ -341,7 +341,7 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">Halusinasi</span>
                                                         </div>
-                                                        <select name="halusinasi" id="" class="form-control">
+                                                        <select required name="halusinasi" id="" class="form-control">
                                                             <option value="A">Ada</option>
                                                             <option value="Ta">Tidak Ada</option>
                                                         </select>
@@ -537,7 +537,7 @@
                                                                 <span class="input-group-text">Riwayat Penyakit
                                                                     Kronis</span>
                                                             </div>
-                                                            <select name="penyakit_kronis" id=""
+                                                            <select required name="penyakit_kronis" id=""
                                                                 class="form-control">
                                                                 <option value="">Tidak Ada</option>
                                                                 <option value="">Ada</option>
@@ -683,7 +683,7 @@
                                                         Rehabilitas?</span>
                                                 </div>
                                                 <select name="terapi_rehab" id="" class="form-control">
-                                                    <option value="0">Tidak</option>
+                                                    <option required value="0">Tidak</option>
                                                     <option value="1">Ya</option>
                                                 </select>
                                             </div>
@@ -704,7 +704,7 @@
                                                         Overdosis?</span>
                                                 </div>
                                                 <select name="overdosis" id="" class="form-control">
-                                                    <option value="0">Tidak</option>
+                                                    <option required value="0">Tidak</option>
                                                     <option value="1">Ya</option>
                                                 </select>
                                             </div>
@@ -726,7 +726,7 @@
                                                     <span class="input-group-text">Cara Penanggulangan</span>
                                                 </div>
                                                 <select name="cara_penanggulangan" id="" class="form-control">
-                                                    <option value="0">Perawatan Di RS</option>
+                                                    <option required value="0">Perawatan Di RS</option>
                                                     <option value="1">Perawatan Di Puskesmas</option>
                                                     <option value="2">Sendiri</option>
                                                 </select>
@@ -752,7 +752,7 @@
                                                 <tr>
                                                     <td>Alkohol</td>
                                                     <td>
-                                                        <input type="radio" name="Alkohol" id="" value="">0
+                                                        <input required type="radio" name="Alkohol" id="" value="">0
                                                         <input type="radio" name="Alkohol" id="" value="1">1
                                                         <input type="radio" name="Alkohol" id="" value="2">2
                                                         <input type="radio" name="Alkohol" id="" value="3">3
@@ -761,7 +761,7 @@
                                                     </td>
                                                     <td>Heroin</td>
                                                     <td>
-                                                        <input type="radio" name="Heroin" id="" value="">0
+                                                        <input required type="radio" name="Heroin" id="" value="">0
                                                         <input type="radio" name="Heroin" id="" value="1">1
                                                         <input type="radio" name="Heroin" id="" value="2">2
                                                         <input type="radio" name="Heroin" id="" value="3">3
@@ -770,7 +770,7 @@
                                                     </td>
                                                     <td>Metadon</td>
                                                     <td>
-                                                        <input type="radio" name="Metadon" id="" value="">0
+                                                        <input required type="radio" name="Metadon" id="" value="">0
                                                         <input type="radio" name="Metadon" id="" value="1">1
                                                         <input type="radio" name="Metadon" id="" value="2">2
                                                         <input type="radio" name="Metadon" id="" value="3">3
@@ -781,7 +781,7 @@
                                                 <tr>
                                                     <td>Analgesik</td>
                                                     <td>
-                                                        <input type="radio" name="Analgesik" id="" value="">0
+                                                        <input required type="radio" name="Analgesik" id="" value="">0
                                                         <input type="radio" name="Analgesik" id="" value="1">1
                                                         <input type="radio" name="Analgesik" id="" value="2">2
                                                         <input type="radio" name="Analgesik" id="" value="3">3
@@ -790,7 +790,7 @@
                                                     </td>
                                                     <td>Barbibutat</td>
                                                     <td>
-                                                        <input type="radio" name="Barbibutat" id="" value="">0
+                                                        <input required type="radio" name="Barbibutat" id="" value="">0
                                                         <input type="radio" name="Barbibutat" id="" value="1">1
                                                         <input type="radio" name="Barbibutat" id="" value="2">2
                                                         <input type="radio" name="Barbibutat" id="" value="3">3
@@ -799,7 +799,7 @@
                                                     </td>
                                                     <td>Sedatif/Hipnotik</td>
                                                     <td>
-                                                        <input type="radio" name="SedaHip" id="" value="">0
+                                                        <input required type="radio" name="SedaHip" id="" value="">0
                                                         <input type="radio" name="SedaHip" id="" value="1">1
                                                         <input type="radio" name="SedaHip" id="" value="2">2
                                                         <input type="radio" name="SedaHip" id="" value="3">3
@@ -810,7 +810,7 @@
                                                 <tr>
                                                     <td>Kokain</td>
                                                     <td>
-                                                        <input type="radio" name="Kokain" id="" value="">0
+                                                        <input required type="radio" name="Kokain" id="" value="">0
                                                         <input type="radio" name="Kokain" id="" value="1">1
                                                         <input type="radio" name="Kokain" id="" value="2">2
                                                         <input type="radio" name="Kokain" id="" value="3">3
@@ -819,7 +819,7 @@
                                                     </td>
                                                     <td>Amfetamin</td>
                                                     <td>
-                                                        <input type="radio" name="Amfetamin" id="" value="">0
+                                                        <input required type="radio" name="Amfetamin" id="" value="">0
                                                         <input type="radio" name="Amfetamin" id="" value="1">1
                                                         <input type="radio" name="Amfetamin" id="" value="2">2
                                                         <input type="radio" name="Amfetamin" id="" value="3">3
@@ -828,7 +828,7 @@
                                                     </td>
                                                     <td>Kanabis</td>
                                                     <td>
-                                                        <input type="radio" name="Kanabis" id="" value="">0
+                                                        <input required type="radio" name="Kanabis" id="" value="">0
                                                         <input type="radio" name="Kanabis" id="" value="1">1
                                                         <input type="radio" name="Kanabis" id="" value="2">2
                                                         <input type="radio" name="Kanabis" id="" value="3">3
@@ -839,7 +839,7 @@
                                                 <tr>
                                                     <td>Halusinogen</td>
                                                     <td>
-                                                        <input type="radio" name="Halusinogen" id="" value="">0
+                                                        <input required type="radio" name="Halusinogen" id="" value="">0
                                                         <input type="radio" name="Halusinogen" id="" value="1">1
                                                         <input type="radio" name="Halusinogen" id="" value="2">2
                                                         <input type="radio" name="Halusinogen" id="" value="3">3
@@ -848,7 +848,7 @@
                                                     </td>
                                                     <td>Inhalan</td>
                                                     <td>
-                                                        <input type="radio" name="Inhalan" id="" value="">0
+                                                        <input required type="radio" name="Inhalan" id="" value="">0
                                                         <input type="radio" name="Inhalan" id="" value="1">1
                                                         <input type="radio" name="Inhalan" id="" value="2">2
                                                         <input type="radio" name="Inhalan" id="" value="3">3
@@ -857,7 +857,7 @@
                                                     </td>
                                                     <td>Lebih dari 4 Zat</td>
                                                     <td>
-                                                        <input type="radio" name="empat_zat" id="" value="">0
+                                                        <input required  type="radio" name="empat_zat" id="" value="">0
                                                         <input type="radio" name="empat_zat" id="" value="1">1
                                                         <input type="radio" name="empat_zat" id="" value="2">2
                                                         <input type="radio" name="empat_zat" id="" value="3">3
@@ -878,7 +878,7 @@
                                                 <td><input type="text" name="zat_lain_isi" id="" class="form-control"
                                                         placeholder="Isi jika menggunakan zat lain"></td>
                                                 <td>
-                                                    <input type="radio" name="zat_lain" id="" value="">0
+                                                    <input required type="radio" name="zat_lain" id="" value="">0
                                                     <input type="radio" name="zat_lain" id="" value="1">1
                                                     <input type="radio" name="zat_lain" id="" value="2">2
                                                     <input type="radio" name="zat_lain" id="" value="3">3
@@ -916,19 +916,19 @@
                                                     <tr>
                                                         <td>Mencuri Toko/ Vandalisme</td>
                                                         <td>
-                                                            <input type="radio" name="mnc" id="" value="">0
+                                                            <input required type="radio" name="mnc" id="" value="">0
                                                             <input type="radio" name="mnc" id="" value="1">1
                                                             <input type="radio" name="mnc" id="" value="2">2
                                                         </td>
                                                         <td>Pelanggaran Bebas Bersyarat / Masa Percobaan</td>
                                                         <td>
-                                                            <input type="radio" name="pbbmp" id="" value="">0
+                                                            <input required type="radio" name="pbbmp" id="" value="">0
                                                             <input type="radio" name="pbbmp" id="" value="1">1
                                                             <input type="radio" name="pbbmp" id="" value="2">2
                                                         </td>
                                                         <td>Masalah Narkoba</td>
                                                         <td>
-                                                            <input type="radio" name="mn" id="" value="">0
+                                                            <input required type="radio" name="mn" id="" value="">0
                                                             <input type="radio" name="mn" id="" value="1">1
                                                             <input type="radio" name="mn" id="" value="2">2
                                                         </td>
@@ -936,19 +936,19 @@
                                                     <tr>
                                                         <td>Pemalsuan</td>
                                                         <td>
-                                                            <input type="radio" name="pmls" id="" value="">0
+                                                            <input required type="radio" name="pmls" id="" value="">0
                                                             <input type="radio" name="pmls" id="" value="1">1
                                                             <input type="radio" name="pmls" id="" value="2">2
                                                         </td>
                                                         <td>Penyerangan Bersenjata</td>
                                                         <td>
-                                                            <input type="radio" name="pnbs" id="" value="">0
+                                                            <input required type="radio" name="pnbs" id="" value="">0
                                                             <input type="radio" name="pnbs" id="" value="1">1
                                                             <input type="radio" name="pnbs" id="" value="2">2
                                                         </td>
                                                         <td>Pembobolan dan Pencurian</td>
                                                         <td>
-                                                            <input type="radio" name="pbpn" id="" value="">0
+                                                            <input required type="radio" name="pbpn" id="" value="">0
                                                             <input type="radio" name="pbpn" id="" value="1">1
                                                             <input type="radio" name="pbpn" id="" value="2">2
                                                         </td>
@@ -956,19 +956,19 @@
                                                     <tr>
                                                         <td>Perampokan</td>
                                                         <td>
-                                                            <input type="radio" name="prm" id="" value="">0
+                                                            <input required type="radio" name="prm" id="" value="">0
                                                             <input type="radio" name="prm" id="" value="1">1
                                                             <input type="radio" name="prm" id="" value="2">2
                                                         </td>
                                                         <td>Penyerangan</td>
                                                         <td>
-                                                            <input type="radio" name="pnr" id="" value="">0
+                                                            <input required type="radio" name="pnr" id="" value="">0
                                                             <input type="radio" name="pnr" id="" value="1">1
                                                             <input type="radio" name="pnr" id="" value="2">2
                                                         </td>
                                                         <td>Pembakaran Rumah</td>
                                                         <td>
-                                                            <input type="radio" name="pr" id="" value="">0
+                                                            <input required type="radio" name="pr" id="" value="">0
                                                             <input type="radio" name="pr" id="" value="1">1
                                                             <input type="radio" name="pr" id="" value="2">2
                                                         </td>
@@ -976,19 +976,19 @@
                                                     <tr>
                                                         <td>Pemerkosaan</td>
                                                         <td>
-                                                            <input type="radio" name="pmrk" id="" value="">0
+                                                            <input required type="radio" name="pmrk" id="" value="">0
                                                             <input type="radio" name="pmrk" id="" value="1">1
                                                             <input type="radio" name="pmrk" id="" value="2">2
                                                         </td>
                                                         <td>Pembunuhan</td>
                                                         <td>
-                                                            <input type="radio" name="pbn" id="" value="">0
+                                                            <input required type="radio" name="pbn" id="" value="">0
                                                             <input type="radio" name="pbn" id="" value="1">1
                                                             <input type="radio" name="pbn" id="" value="2">2
                                                         </td>
                                                         <td>Pelacuran</td>
                                                         <td>
-                                                            <input type="radio" name="plc" id="" value="">0
+                                                            <input required type="radio" name="plc" id="" value="">0
                                                             <input type="radio" name="plc" id="" value="1">1
                                                             <input type="radio" name="plc" id="" value="2">2
                                                         </td>
@@ -996,7 +996,7 @@
                                                     <tr>
                                                         <td>Melecehkan Pengadilan</td>
                                                         <td>
-                                                          <input type="radio" name="mlpg" id="" value="">0
+                                                          <input required type="radio" name="mlpg" id="" value="">0
                                                             <input type="radio" name="mlpg" id="" value="1">1
                                                             <input type="radio" name="mlpg" id="" value="2">2
                                                         </td>
@@ -1011,7 +1011,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                          <input type="radio" name="SL_lain" id="" value="">0
+                                                          <input required type="radio" name="SL_lain" id="" value="">0
                                                             <input type="radio" name="SL_lain" id="" value="1">1
                                                             <input type="radio" name="SL_lain" id="" value="2">2
                                                         </td>
@@ -1039,7 +1039,7 @@
                                                     <span class="input-group-text">Kondisi Hidup Dengan</span>
                                                 </div>
                                                 <select name="kondisi_hidup" id="" class="form-control">
-                                                    <option value="1">Pasangan dan Anak</option>
+                                                    <option required value="1">Pasangan dan Anak</option>
                                                     <option value="2">Pasangan Saja</option>
                                                     <option value="3">Anak Saja</option>
                                                     <option value="4">Orangtua</option>
@@ -1058,7 +1058,7 @@
                                                         dengan penyalahgunaan zat?</span>
                                                 </div>
                                                 <select name="hidup_dgn_pgn_zat" id="" class="form-control">
-                                                    <option value="0">Tidak</option>
+                                                    <option required value="0">Tidak</option>
                                                     <option value="1">Ya</option>
                                                 </select>
                                             </div>
@@ -1077,7 +1077,7 @@
                                                             </div>
                                                             <select name="saudara_kandung_tiri" id=""
                                                                 class="form-control">
-                                                                <option value="0">Tidak</option>
+                                                                <option required value="0">Tidak</option>
                                                                 <option value="1">Ya</option>
                                                             </select>
                                                         </div>
@@ -1090,7 +1090,7 @@
                                                                 <span class="input-group-text">Ayah/Ibu</span>
                                                             </div>
                                                             <select name="ayah_ibu" id="" class="form-control">
-                                                                <option value="0">Tidak</option>
+                                                                <option required value="0">Tidak</option>
                                                                 <option value="0">Ya</option>
                                                             </select>
                                                         </div>
@@ -1101,7 +1101,7 @@
                                                                 <span class="input-group-text">Om/Tante</span>
                                                             </div>
                                                             <select name="om_tante" id="" class="form-control">
-                                                                <option value="0">Tidak</option>
+                                                                <option required value="0">Tidak</option>
                                                                 <option value="1">Ya</option>
                                                             </select>
                                                         </div>
@@ -1114,7 +1114,7 @@
                                                                 <span class="input-group-text">Teman</span>
                                                             </div>
                                                             <select name="teman" id="" class="form-control">
-                                                                <option value="0">Tidak</option>
+                                                                <option required value="0">Tidak</option>
                                                                 <option value="1">Ya</option>
                                                             </select>
                                                         </div>
@@ -1125,7 +1125,7 @@
                                                                 <span class="input-group-text">Pasangan</span>
                                                             </div>
                                                             <select name="pasangan" id="" class="form-control">
-                                                                <option value="0">Tidak</option>
+                                                                <option required value="0">Tidak</option>
                                                                 <option value="1">Ya</option>
                                                             </select>
                                                         </div>
@@ -1141,7 +1141,7 @@
                                                                 class="form-control">
                                                             <select name="RL_lainnya" id="" class="form-control"
                                                                 style="max-width:30%;">
-                                                                <option value="0">Tidak</option>
+                                                                <option required value="0">Tidak</option>
                                                                 <option value="1">Ya</option>
                                                             </select>
                                                         </div>
@@ -1168,25 +1168,25 @@
                                                     <tbody>
                                                         <tr>
                                                             <td>Ibu</td>
-                                                            <td><input type="radio" name="KIbu" id="" value="">0</td>
+                                                            <td><input required type="radio" name="KIbu" id="" value="">0</td>
                                                             <td><input type="radio" name="KIbu" id="" value="1">1</td>
                                                             <td><input type="radio" name="KIbu" id="" value="2">2</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Adik/Kakak</td>
-                                                            <td><input type="radio" name="KAdiKa" id="" value="">0</td>
+                                                            <td><input required type="radio" name="KAdiKa" id="" value="">0</td>
                                                             <td><input type="radio" name="KAdiKa" id="" value="1">1</td>
                                                             <td><input type="radio" name="KAdiKa" id="" value="2">2</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Pasangan</td>
-                                                            <td><input type="radio" name="KPas" id="" value="0">0</td>
+                                                            <td><input required type="radio" name="KPas" id="" value="0">0</td>
                                                             <td><input type="radio" name="KPas" id="" value="1">1</td>
                                                             <td><input type="radio" name="KPas" id="" value="2">2</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Anak-anak</td>
-                                                            <td><input type="radio" name="KAnak" id="" value="0">0</td>
+                                                            <td><input required type="radio" name="KAnak" id="" value="0">0</td>
                                                             <td><input type="radio" name="KAnak" id="" value="1">1</td>
                                                             <td><input type="radio" name="KAnak" id="" value="2">2</td>
                                                         </tr>
@@ -1195,13 +1195,13 @@
                                                                 <input type="text" name="Klain_isi" id=""
                                                                     class="form-control" placeholder="Isi jika ada">
                                                             </td>
-                                                            <td><input type="radio" name="KLain" id="" value="">0</td>
+                                                            <td><input required type="radio" name="KLain" id="" value="">0</td>
                                                             <td><input type="radio" name="KLain" id="" value="1">1</td>
                                                             <td><input type="radio" name="KLain" id="" value="2">2</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Teman Akrab</td>
-                                                            <td><input type="radio" name="TmnAkrab" id="" value="">0
+                                                            <td><input required type="radio" name="TmnAkrab" id="" value="">0
                                                             </td>
                                                             <td><input type="radio" name="TmnAkrab" id="" value="1">1
                                                             </td>
@@ -1210,7 +1210,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td>Tetangga</td>
-                                                            <td><input type="radio" name="ttg" id="" value="">0
+                                                            <td><input required type="radio" name="ttg" id="" value="">0
                                                             </td>
                                                             <td><input type="radio" name="ttg" id="" value="1">1
                                                             </td>
@@ -1219,7 +1219,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td>Teman Kerja</td>
-                                                            <td><input type="radio" name="TmnKerja" id="" value="">0
+                                                            <td><input required type="radio" name="TmnKerja" id="" value="">0
                                                             </td>
                                                             <td><input type="radio" name="TmnKerja" id="" value="1">1
                                                             </td>
@@ -1259,7 +1259,7 @@
                                         <tbody>
                                             <tr>
                                                 <td>Mengalami depresi serius (kesedihan, putus asa)</td>
-                                                <td><input type="radio" name="C1" id="" value="0">0</td>
+                                                <td><input required type="radio" name="C1" id="" value="0">0</td>
                                                 <td><input type="radio" name="C1" id="" value="1">1</td>
                                                 <td><input type="radio" name="C1" id="" value="2">2</td>
                                                 <td>Mengalami rasa cemas serius / ketegangan gelisah</td>
@@ -1270,32 +1270,32 @@
                                             <tr>
                                                 <td>Mengalami halusinasi kesulitan (melihat / mendengar sesuatu
                                                     yang tidak ada objeknya)</td>
-                                                    <td><input type="radio" name="C3" id="" value="">0</td>
+                                                    <td><input required type="radio" name="C3" id="" value="">0</td>
                                                 <td><input type="radio" name="C3" id="" value="1">1</td>
                                                 <td><input type="radio" name="C3" id="" value="2">2</td>
                                                 <td>Mengalami kesulitan mengingat atau fokus ke sesuatu</td>
-                                                <td><input type="radio" name="C4" id="" value="">0</td>
+                                                <td><input required type="radio" name="C4" id="" value="">0</td>
                                                 <td><input type="radio" name="C4" id="" value="1">1</td>
                                                 <td><input type="radio" name="C4" id="" value="2">2</td>
                                             </tr>
                                             <tr>
                                                 <td>mengalami kesukaran mengontrol perilaku kasar, termasuk
                                                     kemarahan atau kekerasan</td>
-                                                    <td><input type="radio" name="C5" id="" value="">0</td>
+                                                    <td><input required type="radio" name="C5" id="" value="">0</td>
                                                 <td><input type="radio" name="C5" id="" value="1">1</td>
                                                 <td><input type="radio" name="C5" id="" value="2">2</td>
                                                 <td>Mengalami pikiran serius unuk bunuh diri</td>
-                                                <td><input type="radio" name="C6" id="" value="">0</td>
+                                                <td><input required type="radio" name="C6" id="" value="">0</td>
                                                 <td><input type="radio" name="C6" id="" value="1">1</td>
                                                 <td><input type="radio" name="C6" id="" value="2">2</td>
                                             </tr>
                                             <tr>
                                                 <td>Berusaha untuk bunuh diri</td>
-                                                <td><input type="radio" name="C7" id="" value="">0</td>
+                                                <td><input required type="radio" name="C7" id="" value="">0</td>
                                                 <td><input type="radio" name="C7" id="" value="1">1</td>
                                                 <td><input type="radio" name="C7" id="" value="2">2</td>
                                                 <td>Menerima pengobatan dari psikiater</td>
-                                                <td><input type="radio" name="C8" id="" value="">0</td>
+                                                <td><input required type="radio" name="C8" id="" value="">0</td>
                                                 <td><input type="radio" name="C8" id="" value="1">1</td>
                                                 <td><input type="radio" name="C8" id="" value="2">2</td>
                                             </tr>
@@ -1356,15 +1356,22 @@
     </div><br>
 
 
-    <div class="row form-group">
-        <div class="form-group col-md-6">
-            <div class="input-group input-group-sm">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Rp.</span>
-                </div>
-                <input type="text" class="form-control" name="biaya_pemeriksaan">
-            </div>
-        </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h5>Biaya Konsultasi Dokter</h5>
+      </div>
+      <div class="col-md-12">
+        <div class="row form-group">
+          <div class="form-group col-md-6">
+              <div class="input-group input-group-sm">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text">Rp.</span>
+                  </div>
+                  <input type="text" class="form-control" id="rupiah" name="biaya_pemeriksaan">
+              </div>
+          </div>
+      </div>
+      </div>
     </div>
     <div class="row">
         <div class="form-group col-md-12">
@@ -1384,13 +1391,13 @@
                         </option>
                     @endforeach
                 </select>
-                <input type="text" class="form-control" name="aturan_pakai[]" id="aturan_pakai{{ $id_antrean }}"
+                <input type="text" class="form-control" required name="aturan_pakai[]" id="aturan_pakai{{ $id_antrean }}"
                     placeholder="Aturan Pakai">
-                <input type="text" class="form-control" name="jumlah[]" id="jumlah{{ $id_antrean }}"
-                    placeholder="" style="max-width:10%;">
+                <input type="text" class="form-control" required name="jumlah[]" id="jumlah{{ $id_antrean }}"
+                    placeholder="Jumlah Pemakaian" style="max-width:10%;">
 
                 <div class="input-group-prepend">
-                    <input type="button" class="btn btn-primary btn-sm" name="pekerjaan" id=""
+                    <input type="button" required class="btn btn-primary btn-sm" name="pekerjaan" id=""
                         onclick="myFunction({{ $id_antrean }})" value="+">
                 </div>
             </div><br>
@@ -1399,7 +1406,7 @@
                     <tr>
                         <th>Obat</th>
                         <th>Aturan Pakai</th>
-                        <th>Anjuran Pemakaian</th>
+                        <th>Jumlah Pemakaian</th>
                     </tr>
                 </thead>
                 <tbody id="myTable{{ $id_antrean }}">
