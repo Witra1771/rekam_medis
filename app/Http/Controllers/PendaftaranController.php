@@ -135,6 +135,10 @@ class pendaftaranController extends Controller
         $data->alamat           = $request->alamat;
         $data->nohp             = $request->nohp;
         $data->status_perkawinan= $request->status_perkawinan;
+        $data->pendidikan_terakhir = $request->pendidikan_terakhir;
+        $data->status_pekerjaan = $request->status_pekerjaan; 
+        $data->pola_pekerjaan = $request->pola_pekerjaan;
+        $data->keterampilan_teknis = $request->keterampilan_teknis;
         $data->foto_ktp         = $idktp.".".$ktpext;
         $data->foto_pasien      = $idpasien.".".$pasienext;
         $data->save();

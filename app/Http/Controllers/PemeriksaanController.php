@@ -303,7 +303,6 @@ class PemeriksaanController extends Controller
         $pemeriksaan->id_pem_tambahan       = "PT".$request->idP;
         $pemeriksaan->id_status_medis       = "SM".$request->idP;
         $pemeriksaan->id_rawat_inap         = "RI".$request->idP;
-        $pemeriksaan->id_status_pekerjaan   = "SPK".$request->idP;
         $pemeriksaan->id_jenis_penyakit     = "JP".$request->idP;
         $pemeriksaan->id_pgnn_narkoba       = "PGN".$request->idP;
         $pemeriksaan->id_status_legal       = "SL".$request->idP;
