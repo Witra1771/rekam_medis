@@ -9,6 +9,8 @@ use App\Models\Spesialis;
 use App\Models\antrean;
 use App\Models\Pasien;
 use App\Models\User;
+use PDF;
+use Dompdf\Dompdf;
 use Illuminate\Http\Request;
 
 class AntreanController extends Controller
@@ -62,5 +64,20 @@ class AntreanController extends Controller
         
         Alert::success('Pasien '.$antrean->nama." Sedang Melakukan Pemeriksaan");
         return redirect(url('/antrean'));
+    }
+
+    public function cetak($id_antrean){
+        $data_antri = DB::table('antrean')->join('user', 'user.id_user', '=', 'antrean.dokter')->join('pasien', 'pasien.nik', '=', 'antrean.pasien')->where('antrean.id_antrean','=',$id_antrean)->first();
+        $kunjungan = DB::table('antrean')->where('pasien',$data_antri->pasien)->count();
+
+        $data = [
+            'noAntrian' => $data_antri->antreana != null ? $data_antri->antreana : $data_antri->antreanb ,
+            'tanggal' => $data_antri->tanggal,    
+            'spesialis' => $data_antri->spesialis == 1 ? 'Umum' : 'Kejiwaan',         
+            'kunjungan' => $kunjungan,
+            'dokter'    => $data_antri->nama  
+              ];
+              $pdf = PDF::loadView('AdminPendaftaran.no_antrean', $data);
+              return $pdf->stream($data_antri->tanggal."_".$data_antri->nama_pasien.'.pdf');
     }
 }
