@@ -86,7 +86,7 @@
           @csrf
             <div class="card-body">
               <div class="row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-4" hidden>
                   <label for="exampleInputEmail1">ID Obat</label>
                   <input type="text" class="form-control" name="id_obat" id="" value="{{ @$Id }}" readonly>
                 </div>
@@ -263,6 +263,7 @@
           @csrf
             <div class="card-body">
               Apakah anda yakin akan menghapus data obat <b>{{ $d->nama_obat }}</b>?
+              <input type="text" name="id_obat" id="" value="{{$d->id_obat}}" hidden>
             </div>
             <!-- /.card-body -->
             <div class="card-footer modal-footer justify-content-between">

@@ -125,7 +125,7 @@ class pendaftaranController extends Controller
         $ftkp           = $foto_ktp->getClientOriginalName();
         $fpasien        = $foto_pasien->getClientOriginalName();
         $data                   = new Pasien();
-        $data->id_pasien        = $request->id_pasien;
+        $data->id_pasien        = date("Ymdhis");
         $data->nik              = $request->nik;
         $data->nama_pasien      = $request->nama_pasien;
         $data->tempat_lahir     = $request->tempat_lahir;
@@ -158,10 +158,9 @@ class pendaftaranController extends Controller
     
         }
         $antrean    = new Antrean();
-        print_r($antreanA);
         $last       = @$antreanA->antreana;
 
-        $antrean->id_antrean    = $Id;
+        $antrean->id_antrean    = date("Ymdhis");
         if ($request->spesialis == "1") {
             
             $dokter = Spesialis::find($request->spesialis);
@@ -198,9 +197,10 @@ class pendaftaranController extends Controller
 		$foto_pasien->move('img', $data->foto_pasien);
         echo $foto_pasien->getClientOriginalName();
         Alert::success('Data '.$request->nama_pasien." berhasil disimpan");
-
+        
+        $dokter = user::find($request->nama_dokter);
         $pemeriksaan = pemeriksaan::find($request->id_pasien);
-        $nik        = DB::table('pemeriksaan')->where('id_pasien',$request->d_pasien)->count();
+        $nik        = DB::table('pemeriksaan')->where('id_pasien',$request->id_pasien)->count();
 
       
         $data = [
@@ -208,7 +208,7 @@ class pendaftaranController extends Controller
             'tanggal' => date("d-m-Y"),    
             'spesialis' => $spesdok,         
             'kunjungan' => $nik+1,
-            'dokter'    => $request->nama_dokter  
+            'dokter'    => $dokter->nama  
               ];
               $pdf = PDF::loadView('AdminPendaftaran.no_antrean', $data);
               return $pdf->stream(date("d-m-Y")."_".$request->nama_pasien.'.pdf');

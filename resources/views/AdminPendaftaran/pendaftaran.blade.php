@@ -21,7 +21,7 @@
 
         <!-- /.card-header -->
         <div class="card-body">
-            <table id="example1" class="table table-bordered table-striped table-hover" style="overflow: auto;">
+            <table id="example1" class="table table-responsive table-bordered table-striped table-hover" style="overflow: auto;">
                 <thead>
                     <tr>
                         <th>Nama Pasien</th>
@@ -59,8 +59,8 @@
                                 <td>{{ $d->alamat }}</td>
                                 <td>{{ $d->nohp }}</td>
                                 <td>{{ $d->status_perkawinan }}</td>
-                                <td><img src="{{ asset('img/') }}{{ '/' . $d->foto_ktp }}" alt=""></td>
-                                <td><img src="{{ asset('img/') }}{{ '/' . $d->foto_pasien }}" alt=""></td>
+                                <td><img src="{{ asset('img/') }}{{ '/' . $d->foto_ktp }}" style="max-width:120px;"></td>
+                                <td><img src="{{ asset('img/') }}{{ '/' . $d->foto_pasien }}" style="max-width:120px;"></td>
                                 <td class="btn-group">
                                     <button type="button" class="btn btn-warning btn-sm" data-toggle="modal"
                                         data-target="#modal-ubah-{{ $d->id_pasien }}">
@@ -129,7 +129,7 @@
                                             <input type="text" class="form-control" name="id_pasien" id=""
                                                 value="{{ @$Id }}">
                                             <input type="text" class="form-control" name="IdP" id=""
-                                                value="{{ @$IdP }}">
+                                                value="<?= date("Ymdhis") ?>">
                                         </div>
                                         <div class="input-group input-group-sm">
                                             <div class="input-group-prepend">

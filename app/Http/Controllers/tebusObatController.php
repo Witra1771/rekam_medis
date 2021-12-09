@@ -41,13 +41,14 @@ class tebusObatController extends Controller
         $tebusObat      = DB::table('pemeriksaan')
                             ->leftJoin('antrean', 'pemeriksaan.id_antrean','=','antrean.id_antrean')
                             ->leftJoin('pasien','pemeriksaan.id_pasien','=','pasien.id_pasien') 
-                            ->select('pemeriksaan.*','antrean.*','pasien.*',)
+                            ->leftJoin('resep_obat','pemeriksaan.id_RO','=','resep_obat.id_RO')
+                            ->select('pemeriksaan.*','antrean.*','pasien.*','resep_obat.jumlah')
+                            ->groupBy('pemeriksaan.id_RO')
                             ->get();
         $resepObat      = DB::table('resep_obat')
                             ->leftJoin('obat','resep_obat.id_obat','=','obat.id_obat')
                             ->get();
 
-        
         $Pantrean       = DB::table('antrean')
                             ->leftJoin('pemeriksaan', 'antrean.id_pemeriksaan','=','pemeriksaan.id_pemeriksaan')
                             ->leftJoin('pemeriksaan_kejiwaan', 'antrean.id_pemeriksaan','=','pemeriksaan.id_pemeriksaan')
@@ -57,18 +58,7 @@ class tebusObatController extends Controller
                             ->select('antrean.*', 'pasien.*', 'user.nama', 'spesialis.spesialis_kedokteran', 'pemeriksaan.*')
                             ->get();
 
-        if ($lastIdTB == null) {
-            $IdTB = substr(date("Y").date("m").date("d"),2)."001";
-        }else{
-            $d      = substr($lastIdTB->id_tebus_obat,7);
-            $count  = strlen(round($d));
-            $id     = $d+1;
-            $no     = '0'.$id;
-            $IdTB   
-            
-            = substr(date("Y").date("m").date("d"),2)."0"  .$no;
-            
-        }
+        
         if ($lastRO == null) {
             $IdRO = substr(date("Y").date("m").date("d"),2)."01";
         }else{
@@ -98,9 +88,9 @@ class tebusObatController extends Controller
             $Id = substr(date("Y").date("m").date("d"),2).$no;
     
         }
+
         $data = [
             'Id'            => $Id,
-            'IdTB'          => $IdTB,
             'IdRO'          => $IdRO,
             'pasien'        => $Pasien,
             'user'          => $User,
@@ -108,6 +98,7 @@ class tebusObatController extends Controller
             'Tobat'         => $Tobat,
             'tebusObat'     => $tebusObat,
             'resepObat'     => $resepObat,
+            'pemeriksaan'   => $Pemeriksaan,
             'antrean'       => $Antrean,    
             'Pantrean'      => $Pantrean,
             'spesialis'     => $Spesialis,
@@ -119,19 +110,21 @@ class tebusObatController extends Controller
         return view('Apoteker.tebus_obat')->with($data);
     }
     public function tambah(Request $request){
+        $id_ResO          = $request->id_ResO;
         $tebus_obat     = new tebus_obat();
-        $id_tebus_obat  = $request->id_tebus_obat;
+        $id_tebus_obat  = date("Ymdhis");
         $id_RO          = $request->idRO;
+        $id_obat          = $request->id_obat;
         $jumlah_beli    = $request->jumlah_beli;
         $sub_total      = $request->sub_total;
-
         
-        $query = "INSERT INTO tebus_obat (id_tebus_obat, id_resep_obat, jumlah_beli, sub_total)
+        
+        $query = "INSERT INTO tebus_obat (id_tebus_obat, id_resep_obat, id_obat, jumlah_beli, sub_total)
         VALUES ";
-        $queryUpdate = "UPDATE resep_obat SET ";
         $struk = [];
         for ($i=0; $i < count($jumlah_beli); $i++) {
-            $query .= "(".$id_tebus_obat.",'".$request->idRO."','".$jumlah_beli[$i]."','".$sub_total[$i]."'),";
+            $queryUpdate = "UPDATE resep_obat SET ";
+            $query .= "(".$id_tebus_obat.",'".$request->idRO."','".$request->id_obat[$i]."','".$jumlah_beli[$i]."','".$sub_total[$i]."'),";
             // ---------------------------------------
             $data = [
                 "id_RO" => $request->id_resep_obat[$i],
@@ -147,15 +140,23 @@ class tebusObatController extends Controller
                     $jml = $Res->jumlah - $jumlah_beli[$i];
                 }
             $queryUpdate .= "jumlah = ".$jml;
-            $queryUpdate .= " WHERE id_RO = ".$request->id_resep_obat[$i]." And id_obat = ".$request->id_obat[$i];
+            $queryUpdate .= " WHERE id_RO = ".$request->id_resep_obat[$i]." And id_obat = ".$request->id_obat[$i]." ";
+            echo $queryUpdate;
             DB::statement($queryUpdate);
+            DB::statement(substr($query,0,-1));
 
         }
         $query = substr($query,0, -1);
         $data = [
-            'tebusObat'     => tebus_obat::all(),
+            'tebusObat'     => DB::table('resep_obat')->where('id_RO', $id_ResO)
+                                ->leftJoin('obat','resep_obat.id_obat','=','obat.id_obat')
+                                ->select('resep_obat.*','obat.*')
+                                ->get(),
             'obat'          => Obat::all(),
-            'id_tebus_obat' => $id_tebus_obat
+            'id_tebus_obat' => $id_tebus_obat,
+            'jumlah_beli'   => $jumlah_beli,
+            'id_obat'       => $id_obat,
+            'id_ResO'       => $id_ResO
         ];
           
               $pdf = PDF::loadView('Apoteker.struk_obat', $data);
@@ -181,6 +182,7 @@ class tebusObatController extends Controller
                         ->leftJoin('tebus_obat', 'pemeriksaan.id_RO','=','tebus_obat.id_resep_obat')
                         ->leftJoin('pasien','pemeriksaan.id_pasien','=','pasien.id_pasien') 
                         ->select('pemeriksaan.*','tebus_obat.*','pasien.*',)
+                        ->groupBy('tebus_obat.id_tebus_obat')
                         ->get();
         $resepObat  = DB::table('resep_obat')
                         ->leftJoin('obat','resep_obat.id_obat','=','obat.id_obat')
@@ -244,6 +246,7 @@ class tebusObatController extends Controller
             'IdRO'          => $IdRO,
             'user'          => $User,
             'Tobat'         => $Tobat,
+            'obat'          => Obat::all(),
             'tebusObat'     => $tebusObat,
             'resepObat'     => $resepObat,    
             'Pantrean'      => $Pantrean,

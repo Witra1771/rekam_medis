@@ -1,12 +1,12 @@
-@include('common.header', ['titlePage' => 'Kelola Obat'])
-@include('common.navbar', ['linkActive' => 'kelola_obat'])
+@include('common.header', ['titlePage' => 'Tebus Obat'])
+@include('common.navbar', ['linkActive' => 'TebusObat'])
 @include('common.menu')
 
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
   <h3 class="card-title">Operation</h3>
-  <label for="">Operation/Kelola Obat</label>
+  <label for="">Operation/Tebus Obat</label>
   <div class="card">
 
 <!-- /.card-header -->
@@ -21,6 +21,7 @@
       </thead>
       <tbody>
         @foreach($tebusObat as $d)
+          @if($d->jumlah >= 1)
         <tr>
           <td>
             @if($d->antreana != "")
@@ -36,6 +37,7 @@
               </button>
             </td>
         </tr>
+          @endif
         @endforeach
     </tbody>
     <tfoot>
@@ -82,7 +84,6 @@
                       <span class="input-group-text">NIK</span>
                     </div>
                     <input type="text" class="form-control" name="idRO" id="" value="{{ $IdRO }}" hidden>
-                    <input type="text" class="form-control" name="id_tebus_obat" id="" value="{{ $IdTB }}" hidden>
                     <input type="text" class="form-control" name="id_antrean" id="" value="{{ $d->id_antrean }}" hidden>
                       <input type="text" class="form-control" name="id_pasien" id="" value="{{ $d->id_pasien }}" hidden>
                       <input type="text" class="form-control" name="nik" id="" value="{{ $d->nik }}" readonly hidden><br>
@@ -107,10 +108,11 @@
                               @foreach($resepObat as $RO)
                                 @if($RO->id_RO == $d->id_RO)
                                   @foreach($obat as $obt)
-                                    @if($obt->id_obat == $RO->id_obat)
+                                    @if($obt->id_obat == $RO->id_obat && $RO->jumlah >= 1)
                                       <?php $i += 1 ?>
                                 <tr>
-                                    <td>{{$obt->nama_obat}} {{$obt->dosis}}                                       
+                                    <td>{{$obt->nama_obat}} {{$obt->dosis}}                                   
+                                        <input type="text" name="id_ResO" id="" value="{{$RO->id_RO}}" hidden>
                                         <input type="text" name="id_obat[]" id="" value="{{$obt->id_obat}}" hidden>
                                         <input type="text" name="id_resep_obat[]" id="" value="{{$RO->id_RO}}" hidden>
                                     </td>

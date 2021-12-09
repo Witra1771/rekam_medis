@@ -5,12 +5,12 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand d-flex align-items-center justify-content-center">
                 <div class="sidebar-brand-icon">
                     <img src="{{ asset('img/jatiUkir.png') }}" style="width:50px;">
                 </div>
                 <div class="sidebar-brand-text mx-1" style="font-size:18px;">Apotek  <br><b>Jati Ukir</b></div>
-            </a>
+            </div>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -55,7 +55,7 @@
             </li>
             <!-- Nav Item - File -->
             <li class="nav-item {{ in_array($linkActive, ['laporan']) ? 'active' : '' }}">
-                <a class="nav-link" href="{{ url('/laporan') }}">
+                <a class="nav-link" href="{{ url('/laporan/data') }}">
                     <i class="fas fa-fw fa-file"></i>
                     <span>Laporan</span></a>
             </li>
@@ -72,7 +72,7 @@
                     <i class="fas fa-fw fa-list-ol"></i>
                     <span>Antrean</span></a>
             </li>
-            @elseif(Auth::user()->hak_akses == 'Perawat')
+            @elseif(Auth::user()->hak_akses == 'Dokter')
             <!-- Nav Item - Tebus Obat -->
             <li class="nav-item {{ in_array($linkActive, ['pemeriksaan']) ? 'active' : '' }}">
                 <a class="nav-link" href="{{ url('/pemeriksaan') }}">
@@ -93,7 +93,7 @@
                     <span>Tebus Obat</span></a>
             </li>
             <!-- Nav Item - Data Pasien -->
-            <li class="nav-item {{ in_array($linkActive, ['dataPasien']) ? 'active' : '' }}">
+            <li class="nav-item {{ in_array($linkActive, ['dataPasienApoteker']) ? 'active' : '' }}">
                 <a class="nav-link" href="{{ url('/dataPasienApoteker') }}">
                     <i class="fas fa-fw fa-file"></i>
                     <span>Data Pasien</span></a>

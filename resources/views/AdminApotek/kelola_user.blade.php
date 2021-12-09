@@ -32,21 +32,23 @@
       </thead>
       <tbody>
         @foreach ($user as $u)
-        <tr>
-          <td>{{ $u->nama }}</td>
-          <td>{{ $u->username }}</td>
-          <td>{{ $u->hak_akses }}</td>
-          <td>{{ $u->dokter_spesialis }}</td>
-          <td class="btn-group">
-          <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modal-ubah-{{  $u->id_user }}">
-            Ubah
-          </button>
-          <!-- <a class="btn btn-warning btn-sm" href="{{ url('/kelola_user/ubah/'. $u->id_user) }}">Ubah</a> -->
-          <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-hapus-{{  $u->id_user }}">
-            Hapus
-          </button>
-        </td>
-      </tr>
+          @if($u->hak_akses != "Admin")
+          <tr>
+            <td>{{ $u->nama }}</td>
+            <td>{{ $u->username }}</td>
+            <td>{{ $u->hak_akses }}</td>
+            <td>{{ $u->dokter_spesialis }}</td>
+            <td class="btn-group">
+            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modal-ubah-{{  $u->id_user }}">
+              Ubah
+            </button>
+            <!-- <a class="btn btn-warning btn-sm" href="{{ url('/kelola_user/ubah/'. $u->id_user) }}">Ubah</a> -->
+            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-hapus-{{  $u->id_user }}">
+              Hapus
+            </button>
+          </td>
+        </tr>
+        @endif
       @endforeach
     </tbody>
     <tfoot>
@@ -82,7 +84,7 @@
             <div class="card-body">
             <div class="row">
                 <div class="form-group col-md-6">
-                  <div class="input-group input-group-sm">
+                  <div class="input-group input-group-sm" hidden>
                     <div class="input-group-prepend">
                       <span class="input-group-text">ID</span>
                     </div>
@@ -334,6 +336,7 @@
           @csrf
             <div class="card-body">
               Apakah anda yakin akan menghapus data pasien <b>{{ $d->nama }}</b>?
+              <input type="text" name="id_user" id="" value="{{$d->id_user}}" hidden>
             </div>
             <!-- /.card-body -->
             <div class="card-footer modal-footer justify-content-between">

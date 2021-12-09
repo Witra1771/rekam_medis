@@ -126,16 +126,16 @@
                                                                 <span class="input-group-text">Finansial</span>
                                                             </div>
                                                             <select required name="finansial" id="" class="form-control">
-                                                                <option value="0">Tidak</option>
-                                                                <option value="1">Ya</option>
+                                                                <option value="Tidak">Tidak</option>
+                                                                <option value="Ya">Ya</option>
                                                             </select>
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text">Tempat
                                                                     Tinggal</span>
                                                             </div>
                                                             <select required name="tempat_tinggal" id="" class="form-control">
-                                                                <option value="0">Tidak</option>
-                                                                <option value="1">Ya</option>
+                                                                <option value="Tidak">Tidak</option>
+                                                                <option value="Ya">Ya</option>
                                                             </select>
                                                         </div>
                                                         <div class="input-group input-group-sm">
@@ -143,16 +143,16 @@
                                                                 <span class="input-group-text">Makan</span>
                                                             </div>
                                                             <select required name="makan" id="" class="form-control">
-                                                                <option value="0">Tidak</option>
-                                                                <option value="1">Ya</option>
+                                                                <option value="Tidak">Tidak</option>
+                                                                <option value="Ya">Ya</option>
                                                             </select>
                                                             <div class="input-group-prepend">
                                                                 <span
                                                                     class="input-group-text">Pengobatan/Perawatan</span>
                                                             </div>
                                                             <select required name="pngbtn_prwtn" id="" class="form-control">
-                                                                <option value="0">Tidak</option>
-                                                                <option value="1">Ya</option>
+                                                                <option value="Tidak">Tidak</option>
+                                                                <option value="Ya">Ya</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -235,8 +235,8 @@
                                                             <span class="input-group-text">Penampilan</span>
                                                         </div>
                                                         <select required name="penampilan" id="" class="form-control">
-                                                            <option value="R">Rapi</option>
-                                                            <option value="KR">Kurang Rapi</option>
+                                                            <option value="Rapi">Rapi</option>
+                                                            <option value="Kurang Rapi">Kurang Rapi</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -316,8 +316,8 @@
                                                             <span class="input-group-text">Pembicaraan</span>
                                                         </div>
                                                         <select required name="alur_pembicaraan" id="" class="form-control">
-                                                            <option value="N">Normal</option>
-                                                            <option value="TN">Tidak Normal</option>
+                                                            <option value="Normal">Normal</option>
+                                                            <option value="Tidak Normal">Tidak Normal</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -329,8 +329,8 @@
                                                             <span class="input-group-text">Waham</span>
                                                         </div>
                                                         <select required name="waham" id="" class="form-control">
-                                                            <option value="A">Ada</option>
-                                                            <option value="Ta">Tidak Ada</option>
+                                                            <option value="Ada">Ada</option>
+                                                            <option value="Tidak Ada">Tidak Ada</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -342,8 +342,8 @@
                                                             <span class="input-group-text">Halusinasi</span>
                                                         </div>
                                                         <select required name="halusinasi" id="" class="form-control">
-                                                            <option value="A">Ada</option>
-                                                            <option value="Ta">Tidak Ada</option>
+                                                            <option value="Aada">Ada</option>
+                                                            <option value="Tidak Ada">Tidak Ada</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -539,8 +539,8 @@
                                                             </div>
                                                             <select required name="penyakit_kronis" id=""
                                                                 class="form-control">
-                                                                <option value="">Tidak Ada</option>
-                                                                <option value="">Ada</option>
+                                                                <option value="Tidak Ada">Tidak Ada</option>
+                                                                <option value="Ada">Ada</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -566,8 +566,8 @@
                                                                     Medis</span>
                                                             </div>
                                                             <select name="terapi_medis" id="" class="form-control">
-                                                                <option value="">Tidak Menjalani</option>
-                                                                <option value="">Sedang Menjalani</option>
+                                                                <option value="Tidak Menjalani">Tidak Menjalani</option>
+                                                                <option value="Sedang Menjalani">Sedang Menjalani</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -598,9 +598,9 @@
                                                                         <span class="input-group-text">HIV</span>
                                                                     </div>
                                                                     <select name="hiv" id="" class="form-control">
-                                                                        <option value="">Pernah Menjalani Test
+                                                                        <option value="Pernah Menjalani">Pernah Menjalani Test
                                                                         </option>
-                                                                        <option value="">Tidak pernah menjalani
+                                                                        <option value="Tidak Pernah Menjalani">Tidak pernah menjalani
                                                                             test</option>
                                                                     </select>
                                                                 </div>
@@ -616,9 +616,9 @@
                                                                     </div>
                                                                     <select name="hepatitib" id=""
                                                                         class="form-control">
-                                                                        <option value="">Pernah Menjalani Test
+                                                                        <option value="Pernah Menjalani">Pernah Menjalani Test
                                                                         </option>
-                                                                        <option value="">Tidak pernah menjalani
+                                                                        <option value="Tidak Pernah Menjalani">Tidak pernah menjalani
                                                                             test</option>
                                                                     </select>
                                                                 </div>
@@ -634,9 +634,9 @@
                                                                     </div>
                                                                     <select name="hepatitisc" id=""
                                                                         class="form-control">
-                                                                        <option value="">Pernah Menjalani Test
+                                                                        <option value="Pernah Menjalani">Pernah Menjalani Test
                                                                         </option>
-                                                                        <option value="">Tidak pernah menjalani
+                                                                        <option value="Tidak Pernah Menjalani">Tidak pernah menjalani
                                                                             test</option>
                                                                     </select>
                                                                 </div>
@@ -683,8 +683,8 @@
                                                         Rehabilitas?</span>
                                                 </div>
                                                 <select name="terapi_rehab" id="" class="form-control">
-                                                    <option required value="0">Tidak</option>
-                                                    <option value="1">Ya</option>
+                                                    <option required value="Tidak">Tidak</option>
+                                                    <option value="Ya">Ya</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -704,8 +704,8 @@
                                                         Overdosis?</span>
                                                 </div>
                                                 <select name="overdosis" id="" class="form-control">
-                                                    <option required value="0">Tidak</option>
-                                                    <option value="1">Ya</option>
+                                                    <option required value="Tidak">Tidak</option>
+                                                    <option value="Ya">Ya</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -726,9 +726,9 @@
                                                     <span class="input-group-text">Cara Penanggulangan</span>
                                                 </div>
                                                 <select name="cara_penanggulangan" id="" class="form-control">
-                                                    <option required value="0">Perawatan Di RS</option>
-                                                    <option value="1">Perawatan Di Puskesmas</option>
-                                                    <option value="2">Sendiri</option>
+                                                    <option required value="Perawatan di RS">Perawatan Di RS</option>
+                                                    <option value="Perawatan di Puskesmas">Perawatan Di Puskesmas</option>
+                                                    <option value="Sendiri">Sendiri</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -916,89 +916,76 @@
                                                     <tr>
                                                         <td>Mencuri Toko/ Vandalisme</td>
                                                         <td>
-                                                            <input required type="radio" name="mnc" id="" value="">0
-                                                            <input type="radio" name="mnc" id="" value="1">1
-                                                            <input type="radio" name="mnc" id="" value="2">2
+                                                            <input type="radio" name="mnc" id="" value="Ya">Ya
+                                                            <input type="radio" name="mnc" id="" value="Tidak">Tidak
                                                         </td>
                                                         <td>Pelanggaran Bebas Bersyarat / Masa Percobaan</td>
                                                         <td>
-                                                            <input required type="radio" name="pbbmp" id="" value="">0
-                                                            <input type="radio" name="pbbmp" id="" value="1">1
-                                                            <input type="radio" name="pbbmp" id="" value="2">2
+                                                            <input type="radio" name="pbbmp" id="" value="Ya">Ya
+                                                            <input type="radio" name="mnc" id="" value="Tidak">Tidak
                                                         </td>
                                                         <td>Masalah Narkoba</td>
                                                         <td>
-                                                            <input required type="radio" name="mn" id="" value="">0
-                                                            <input type="radio" name="mn" id="" value="1">1
-                                                            <input type="radio" name="mn" id="" value="2">2
+                                                            <input type="radio" name="mn" id="" value="Ya">Ya
+                                                            <input type="radio" name="mnc" id="" value="Tidak">Tidak
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Pemalsuan</td>
                                                         <td>
-                                                            <input required type="radio" name="pmls" id="" value="">0
-                                                            <input type="radio" name="pmls" id="" value="1">1
-                                                            <input type="radio" name="pmls" id="" value="2">2
+                                                            <input type="radio" name="pmls" id="" value="Ya">Ya
+                                                            <input type="radio" name="mnc" id="" value="Tidak">Tidak
                                                         </td>
                                                         <td>Penyerangan Bersenjata</td>
                                                         <td>
-                                                            <input required type="radio" name="pnbs" id="" value="">0
-                                                            <input type="radio" name="pnbs" id="" value="1">1
-                                                            <input type="radio" name="pnbs" id="" value="2">2
+                                                            <input type="radio" name="pnbs" id="" value="Ya">Ya
+                                                            <input type="radio" name="mnc" id="" value="Tidak">Tidak
                                                         </td>
                                                         <td>Pembobolan dan Pencurian</td>
                                                         <td>
-                                                            <input required type="radio" name="pbpn" id="" value="">0
-                                                            <input type="radio" name="pbpn" id="" value="1">1
-                                                            <input type="radio" name="pbpn" id="" value="2">2
+                                                            <input type="radio" name="pbpn" id="" value="Ya">Ya
+                                                            <input type="radio" name="mnc" id="" value="Tidak">Tidak
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Perampokan</td>
                                                         <td>
-                                                            <input required type="radio" name="prm" id="" value="">0
-                                                            <input type="radio" name="prm" id="" value="1">1
-                                                            <input type="radio" name="prm" id="" value="2">2
+                                                            <input type="radio" name="prm" id="" value="Ya">Ya
+                                                            <input type="radio" name="mnc" id="" value="Tidak">Tidak
                                                         </td>
                                                         <td>Penyerangan</td>
                                                         <td>
-                                                            <input required type="radio" name="pnr" id="" value="">0
-                                                            <input type="radio" name="pnr" id="" value="1">1
-                                                            <input type="radio" name="pnr" id="" value="2">2
+                                                            <input type="radio" name="pnr" id="" value="Ya">Ya
+                                                            <input type="radio" name="mnc" id="" value="Tidak">Tidak
                                                         </td>
                                                         <td>Pembakaran Rumah</td>
                                                         <td>
-                                                            <input required type="radio" name="pr" id="" value="">0
-                                                            <input type="radio" name="pr" id="" value="1">1
-                                                            <input type="radio" name="pr" id="" value="2">2
+                                                            <input type="radio" name="pr" id="" value="Ya">Ya
+                                                            <input type="radio" name="mnc" id="" value="Tidak">Tidak
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Pemerkosaan</td>
                                                         <td>
-                                                            <input required type="radio" name="pmrk" id="" value="">0
-                                                            <input type="radio" name="pmrk" id="" value="1">1
-                                                            <input type="radio" name="pmrk" id="" value="2">2
+                                                            <input type="radio" name="pmrk" id="" value="Ya">Ya
+                                                            <input type="radio" name="mnc" id="" value="Tidak">Tidak
                                                         </td>
                                                         <td>Pembunuhan</td>
                                                         <td>
-                                                            <input required type="radio" name="pbn" id="" value="">0
-                                                            <input type="radio" name="pbn" id="" value="1">1
-                                                            <input type="radio" name="pbn" id="" value="2">2
+                                                            <input type="radio" name="pbn" id="" value="Ya">Ya
+                                                            <input type="radio" name="mnc" id="" value="Tidak">Tidak
                                                         </td>
                                                         <td>Pelacuran</td>
                                                         <td>
-                                                            <input required type="radio" name="plc" id="" value="">0
-                                                            <input type="radio" name="plc" id="" value="1">1
-                                                            <input type="radio" name="plc" id="" value="2">2
+                                                            <input type="radio" name="pnr" id="" value="Ya">Ya
+                                                            <input type="radio" name="mnc" id="" value="Tidak">Tidak
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Melecehkan Pengadilan</td>
                                                         <td>
-                                                          <input required type="radio" name="mlpg" id="" value="">0
-                                                            <input type="radio" name="mlpg" id="" value="1">1
-                                                            <input type="radio" name="mlpg" id="" value="2">2
+                                                            <input type="radio" name="mlpg" id="" value="Ya">Ya
+                                                            <input type="radio" name="mnc" id="" value="Tidak">Tidak
                                                         </td>
                                                         <td>
                                                             <div class="input-group input-group-sm">
@@ -1011,9 +998,8 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                          <input required type="radio" name="SL_lain" id="" value="">0
-                                                            <input type="radio" name="SL_lain" id="" value="1">1
-                                                            <input type="radio" name="SL_lain" id="" value="2">2
+                                                            <input type="radio" name="pnr" id="" value="Ya">Ya
+                                                            <input type="radio" name="mnc" id="" value="Tidak">Tidak
                                                         </td>
                                                     </tr>
                                                 </tbody>

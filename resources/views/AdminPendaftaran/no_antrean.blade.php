@@ -9,8 +9,8 @@
 </head>
 <body style="width:75mm;">
 
-<h1 style="font-size:6mm;"><center>Apotek <br>Jati Ukir</center></h1>
-  <h1 style="font-size:8mm;"><center>No Antrian</center></h1>
+<h1 style="font-size:8mm;"><center>Apotek Jati Ukir</center></h1>
+  <h1 style="font-size:7mm;"><center>No Antrian</center></h1>
   <p>
   <h1 style="font-size:20mm;"><center>{{ $noAntrian}}</center></h1>
   </p>

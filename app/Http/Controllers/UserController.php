@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use DB;
 use Alert;
 use App\Models\user;
+use App\Models\pemeriksaan;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
@@ -82,10 +83,16 @@ class UserController extends Controller
     }
     public function hapus(Request $request, $id_user){
         $data = new User();
-        $user = User::find($id_user);
-        $user->delete();
+        $user = User::find($request->id_user);
+        
+        $cek_user = DB::table('antrean')->where('dokter', $request->id_user)->get();
+        if (count($cek_user) == 0) {
+            Alert::success('Data '.$user->nama." berhasil Dihapus");
+            $user->delete();
+        }else{
+            Alert::warning('Data '.$user->nama." tidak bisa dihapus");
+        }
 
-        Alert::success('Data '.$data->nama." berhasil Dihapus");
         return redirect(url('/kelola_user'));
     }
 }

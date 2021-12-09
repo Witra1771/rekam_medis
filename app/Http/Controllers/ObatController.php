@@ -68,10 +68,16 @@ class ObatController extends Controller
     }
     public function hapus(Request $request, $id_obat){
         $obat = new Obat();
-        $obat = Obat::find($id_obat);
-        $obat->delete();
+        $obat = Obat::find($request->id_obat);
+        
+        $cek_obat = DB::table('resep_obat')->where('id_obat', $request->id_obat)->get();
+        if (count($cek_obat) == 0) {
+            Alert::success('Data '.$obat->nama_obat." berhasil Dihapus");
+            $obat->delete();
+        }else{
+            Alert::warning('Data '.$obat->nama_obat." tidak bisa dihapus");
+        }
 
-        Alert::success('Data '.$obat->nama_obat." berhasil dihapus");
         return redirect(url('/kelola_obat'));
     }
 }

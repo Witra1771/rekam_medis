@@ -38,39 +38,24 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
+                <table id="example" class="display" style="width:100%">
                   <thead>
                   <tr>
-                    <th>Nama Pasien</th>
-                    <th>Pemeriksaan</th>
-                    <th>Pemeriksa</th>
-                    <th>Tanggal</th>
-                    <th>Keluhan</th>
-                    <th>Diagnosa</th>
-                    <th>Penanganan</th>
+                    <th>id tebus obat</th>
+                    <th>id resep obat</th>
+                    <th>id obat</th>
+                    <th>jumlah beli</th>
+                    <th>sub total</th>
                   </tr>
                   </thead>
-                  <tbody>
-                  
-                  <tr>
-                    <td>Agung</td>
-                    <td>Umum</td>
-                    <td>Dr. Ratna</td>
-                    <td>10-11-2021</td>
-                    <td>Batuk</td>
-                    <td>radang tenggorokan</td>
-                    <td>banyak minum air putih</td>
-                  </tr>
-                  </tbody>
+                  <tbody id="tebus_obat"></tbody>
                   <tfoot>
                   <tr>
-                    <th>Nama Pasien</th>
-                    <th>Pemeriksaan</th>
-                    <th>Pemeriksa</th>
-                    <th>Tanggal</th>
-                    <th>Keluhan</th>
-                    <th>Diagnosa</th>
-                    <th>Penanganan</th>
+                    <th>id tebus obat</th>
+                    <th>id resep obat</th>
+                    <th>id obat</th>
+                    <th>jumlah beli</th>
+                    <th>sub total</th>
                   </tr>
                   </tfoot>
                 </table>

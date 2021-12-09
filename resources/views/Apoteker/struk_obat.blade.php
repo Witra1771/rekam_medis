@@ -11,30 +11,49 @@
 
 <h1 style="font-size:8mm;"><center>Apotek Jati Ukir</center></h1>
 <p><center>Jl. Arya Wiratanudatar</center></p><br>
-<p><center>============================</center></p>
+<p><b>=============================</b></p>
 
   <div style="font-size:4mm;">
   <center>
-      <table width="80%" style="margin-left:50px;">
+    <?php $sekarang = 0 ?>
+      <table width="100%">
         <thead>
           <tr>
-            <td><b>Obat</b>{{$id_tebus_obat}}</td>
-            <td><b>Harga</b></td>
+            <td><b>Obat</b></td>
+            <td><b>Jml</b></td>
+            <td><b>Sub Total</b></td>
           </tr>
+        <tr>
+          <td colspan="3">---------------------------------------------------</td>
+        </tr>
         </thead>
         @foreach($tebusObat as $TB)
-        <tr>
-          <td>{{$TB->id_tebus_obat}}</td>
-        </tr>
-
+            @for($i =0; $i < count($id_obat); $i++))
+              @if($id_obat[$i] == $TB->id_obat)
+                <tr>
+                  <td>{{$TB->nama_obat}} {{$TB->dosis}}<br>Rp.{{$TB->harga_jual}}</td>
+                  <td>{{$jumlah_beli[$i]}}</td>
+                  <td>Rp. {{$jumlah_beli[$i] * $TB->harga_jual}}</td>
+                </tr>
+              <?php
+                $temp     = $jumlah_beli[$i] * $TB->harga_jual;
+                $total    = $temp + $sekarang;
+                ?>
+              @endif
+            @endfor
         @endforeach
+        <tr>
+          <td colspan="3">---------------------------------------------------</td>
+        </tr>
+        <tr>
+          <td colspan=2>Total Bayar</td>
+          <td>Rp. {{$total}}</td>
+        </tr>
       </table>
-      <br>
-      <p>Semoga Lekas Sembuh
-      </p>
-      <p>=================</p>
     </center>
+<p><b>===============================</b></p>
+      <br>
+      <p><center>Semoga Lekas Sembuh</center></p>
   </div>
-</body>
 </body>
 </html>

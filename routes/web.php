@@ -47,15 +47,14 @@ Route::get('/prosesLogin', [LoginController::class, 'prosesLogin']);
 Route::get('/kelola_user', [UserController::class, 'index']);
 Route::POST('/kelola_user/tambah', [UserController::class, 'tambah']);
 Route::POST('/kelola_user/ubah/{id_user}', [UserController::class, 'ubah']);
-Route::get('/kelola_user/hapus/{id_user}', [UserController::class, 'hapus']);
-Route::get('/run', [UserController::class, 'run']);
+Route::POST('/kelola_user/hapus/{id_user}', [UserController::class, 'hapus']);
 //Kelola Obat
 Route::get('/kelola_obat', [ObatController::class, 'index']);
 Route::POST('/kelola_obat/tambah', [ObatController::class, 'tambah']);
 Route::POST('/kelola_obat/ubah/{id_obat}', [ObatController::class, 'ubah']);
 Route::POST('/kelola_obat/hapus/{id_obat}', [ObatController::class, 'hapus']);
 //Laporan
-Route::get('/laporan', [LaporanController::class, 'index']);
+Route::get('/laporan/data', [LaporanController::class, 'index']);
 
 //Pendaftaran
 //Pendaftaran

@@ -226,7 +226,7 @@ class PemeriksaanController extends Controller
         $pemeriksaan->id_antrean            = $request->id_antrean;
         $pemeriksaan->id_pasien             = $request->id_pasien;
         $pemeriksaan->id_RO                 = $request->idRO;
-        $pemeriksaan->jenis_konsultasi   = $request->kode_spesialis;
+        $pemeriksaan->jenis_konsultasi      = "Umum";
         $pemeriksaan->biaya_pemeriksaan     = $request->biaya_pemeriksaan;
 
         //Resep Obat

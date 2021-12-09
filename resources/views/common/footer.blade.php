@@ -60,13 +60,6 @@
 <!-- Custom scripts for all pages-->
 <script src="{{ asset('global/js/sb-admin-2.min.js') }}"></script>
 
-<!-- Page level plugins -->
-<script src="{{ asset('global/vendor/chart.js/Chart.min.js') }}"></script>
-
-<!-- Page level custom scripts -->
-<script src="{{ asset('global/js/demo/chart-area-demo.js') }}"></script>
-<script src="{{ asset('global/js/demo/chart-pie-demo.js') }}"></script>
-
 <!-- DataTables -->
 <script src="{{ asset('global/plugins/datatables/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('global/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
@@ -88,6 +81,40 @@ integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07j
 
 <!-- page script -->
 <script>
+    var sn = 0; // start a serial number count
+            $.each(data, function(index, val) {
+                sn++;
+                // build a new rows and cols using ES6^ template
+                $(".tebus_obat").append(`
+                    <tr>
+                        <td>${val.id_tebus_obat}</td>
+                        <td>${val.id_resep_obat}</td>
+                        <td>${val.id_obat}</td>
+                        <td>${val.jumlah_beli}</td>
+                        <td>${val.sub_total}</td>
+                        <td>
+                            <a href="javascript:void(0);">
+                                <i class="fa fa-trash"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                `);
+            });
+
+
+$(document).ready(function(){
+	$("#example").DataTable({
+		"ajax": {
+			"url" : "data.php",
+			"dataSrc" : ""
+		},
+		"columns" : [
+			{"data" : "title"},
+			{"data": "body"},
+			{"data" : "created_at"}
+		]
+	})
+})
     var rupiah = document.getElementById('rupiah');
     rupiah.addEventListener('keyup', function(e) {
         // tambahkan 'Rp.' pada saat form di ketik
