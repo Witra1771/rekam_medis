@@ -71,6 +71,7 @@ Route::POST('/pendaftaran/tambah', [PendaftaranController::class, 'tambah']);
 Route::POST('/kelola_user/ubah/{id_user}', [UserController::class, 'ubah']);
 Route::POST('/pendaftaran/hapus/{id_pasien}', [PendaftaranController::class, 'hapus']);
 Route::POST('/antrean/proses/{id_antrean}', [AntreanController::class, 'proses']);
+Route::get('/antrean/{id_antrean}/cetak', [AntreanController::class, 'cetak']);
 
 //Dokter
 //Pemeriksaan

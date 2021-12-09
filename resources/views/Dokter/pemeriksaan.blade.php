@@ -245,7 +245,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Rp.</span>
                             </div>
-                            <input type="text" class="form-control" name="biaya_pemeriksaan">
+                            <input type="text" id="rupiah" class="form-control" name="biaya_pemeriksaan">
                         </div>
                     </div>
                 </div>
